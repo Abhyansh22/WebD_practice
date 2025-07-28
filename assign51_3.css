@@ -1,0 +1,54 @@
+.flex{
+    display: flex;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.space-evenly{
+    justify-content: space-evenly;
+}
+
+.w-250{
+    width:300px;
+}
+
+.margin{
+    margin: 0 10px 10px 10px;
+}
+
+.margin-bottom{
+    margin-bottom: 20px;
+}
+
+.no-decoration{
+    text-decoration: none;
+}
+
+.grey-bg{
+    background-color: grey;
+}
+
+.ws-bg{
+    background-color: whitesmoke;
+}
+
+.font-white{
+    color:white;
+}
+.font-20{
+    font-size: 20px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.block{
+    display: block;
+}
+
+.padding{
+    padding:10px 0 ; 
+}
