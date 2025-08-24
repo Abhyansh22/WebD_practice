@@ -1,5 +1,5 @@
 import React from 'react'
-import Product from './product'
+import Product from './Product'
 import Nav from './Nav'
 import Footer from './Footer'
 
