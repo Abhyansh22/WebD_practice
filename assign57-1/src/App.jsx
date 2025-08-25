@@ -7,7 +7,7 @@ function App() {
   const [query, setQuery] = useState("")
   const [selected, setSelected] = useState("default")
 
-  const allProduct=[{price:"15.00", desc:"White Coffee Mug", category:"Mugs", image:"https://codeyogi.io/coffee-mug.jpeg"} ,
+  const inventory=[{price:"15.00", desc:"White Coffee Mug", category:"Mugs", image:"https://codeyogi.io/coffee-mug.jpeg"} ,
           {price:"19.00", desc:"Blue Coffee Mug", category:"Mug", image:"https://trycasuals.ezyro.com/wp-content/uploads/2018/06/mug-blue.jpg"},
           {price:"15.00", desc:"Brown Coffee Mug",  category:"Mug", image:"https://trycasuals.ezyro.com/wp-content/uploads/2018/06/mug-coffee-600x600.jpg"},  
           {price:"34.00", desc:"Green Tshirt",  category:"Tshirt", image:"https://trycasuals.ezyro.com/wp-content/uploads/2018/06/tshirt5-600x600.jpg"},
@@ -25,8 +25,8 @@ function App() {
     setQuery((event.target.value).toLowerCase())
   }
 
-  const data =allProduct.filter(function (items){
-    if(items.desc.toLowerCase().indexOf(query)!=-1){
+  const filteredInventory =inventory.filter(function (item){
+    if(item.desc.toLowerCase().indexOf(query)!=-1){
       return true;
     }else{
       return false;
@@ -34,15 +34,15 @@ function App() {
   })
 
   if (selected=="title"){
-    data.sort(function(x,y){
+    filteredInventory.sort(function(x,y){
       return((x.category<y.category)?-1:1)
     })
   }else if(selected=="ltoh"){
-    data.sort(function(x,y){
+    filteredInventory.sort(function(x,y){
       return((+x.price-(+y.price))<0 ?-1:1)
     })
   }else if(selected=="htol"){
-    data.sort(function(x,y){
+    filteredInventory.sort(function(x,y){
       return((+x.price-(+y.price))>0 ?-1:1)
     })
   }
@@ -62,7 +62,7 @@ function App() {
         </div>
         
         <div className='grow'>
-          <ProductList products={data}/>
+          <ProductList products={filteredInventory}/>
         </div>
         <div className='flex gap-2'>
           <a className="pt-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white" href="#">1</a>
