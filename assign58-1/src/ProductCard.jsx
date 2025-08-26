@@ -1,7 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function ProductCard(){
     return(
+            <div className="flex flex-col gap-3">
+            <Link to="/" className="p-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white self-end">Home</Link>
             <div className="flex max-w-3xl mx-auto">
                 <div className="w-1/2 bg-gray-100 p-8 flex items-center justify-center">
                     <img src="https://codeyogi.io/coffee-mug.jpeg" 
@@ -26,6 +29,7 @@ function ProductCard(){
                         </button>
                     </div>
                 </div>
+            </div>
             </div>
             )
 }

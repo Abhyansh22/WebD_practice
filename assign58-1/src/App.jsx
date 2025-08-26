@@ -24,7 +24,7 @@ function App() {
         <div className='flex gap-2'>
           <a className="pt-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white" href="#">1</a>
           <a className="p-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white" href="#">2</a>
-          <Link to="/" className="p-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white">Home</Link>
+          <a className="p-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white" href="#">More</a>
         </div>
       </div>
       <Footer />
