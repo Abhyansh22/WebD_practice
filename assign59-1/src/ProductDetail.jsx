@@ -9,7 +9,7 @@ function ProductDetail(){
     const filtered = inventory.filter(function(item){
         return item.id==identifier.id? true:false
     })
-    //console.log("filtered array: ",filtered)
+    console.log("PD component refreshed")
     return(
         <div >
             <ProductCard description={filtered[0]}></ProductCard>

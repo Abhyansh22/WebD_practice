@@ -3,11 +3,8 @@ import './App.css'
 import ProductList from "./ProductList"
 import { Routes } from 'react-router-dom'
 import { Route } from 'react-router-dom'
-import ProductCard from './ProductCard'
 import Nav from "./Nav"
 import Footer from './Footer'
-import { Link } from 'react-router-dom'
-import inventory from './DummyData'
 import ProductDetail from './ProductDetail'
 
 function App() {

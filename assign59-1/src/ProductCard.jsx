@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function ProductCard({description}){
-    //console.log("incoming details:",)
+    //console.log("incoming details:",description)
     return(
             <div className="flex flex-col gap-3">
                 <Link to="/" className="p-2 px-4 border-red-500 border-2 hover:bg-red-500 hover:text-white self-end mr-4">Home</Link>
