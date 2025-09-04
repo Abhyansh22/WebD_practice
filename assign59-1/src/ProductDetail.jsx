@@ -1,19 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import inventory from "./DummyData";
-import ProductCard from './ProductCard'
+import ProductCard from './ProductCard';
 
-function ProductDetail(){
-    const identifier = useParams()
-    //console.log(identifier)
-    const filtered = inventory.filter(function(item){
-        return item.id==identifier.id? true:false
-    })
-    console.log("PD component refreshed")
-    return(
-        <div >
-            <ProductCard description={filtered[0]}></ProductCard>
+function ProductDetail({ onAddToCart }) {
+    const { id } = useParams();
+
+    const product = inventory.find(item => item.id === id);
+
+    if (!product) {
+        return <div>Product not found!</div>;
+    }
+
+    return (
+        <div>
+            <ProductCard description={product} onAddToCart={onAddToCart} />
         </div>
-    )
+    );
 }
-export default ProductDetail
+
+export default ProductDetail;

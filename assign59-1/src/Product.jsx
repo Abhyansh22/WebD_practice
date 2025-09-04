@@ -9,7 +9,7 @@ function Product(props){
             <p className="text-gray-400 text-xs">{props.category}</p>
             <h3 className="font-bold text-gray-600">{props.desc}</h3>
             <p className="text-gray-600">${props.price}</p>
-            <Link to={"/ProductCard/"+props.id} className="bg-blue-500 rounded-xl py-3 px-6 max-w-xs text-center hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 hover:text-white">View details</Link>
+            <Link to={"/ProductDetail/"+props.id} className="bg-blue-500 rounded-xl py-3 px-6 max-w-xs text-center hover:ring-2 hover:ring-blue-500 hover:ring-offset-2 hover:text-white">View details</Link>
         </div>
     )
 
